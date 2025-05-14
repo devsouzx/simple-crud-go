@@ -110,6 +110,7 @@ func (taskHandler *TaskHandler) DeleteTask(writer http.ResponseWriter, request *
 		http.Error(writer, "Invalid Task ID", http.StatusBadRequest)
 		return
 	}
+	// testando
 
 	var task models.Task
 	err = json.NewDecoder(request.Body).Decode(&task)
